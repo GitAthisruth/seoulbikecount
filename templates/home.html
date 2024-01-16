@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="login">
+        <h1>Seoul Bike Sharing Demand Prediction</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <input type="text" name="Hour" placeholder="Hour" required="required" />
+            <input type="text" name="Temperature(°C)" placeholder="Temperature(°C)" required="required" />
+            <input type="text" name="Humidity(%)" placeholder="Humidity(%)" required="required" />
+            <input type="text" name="Wind speed (m/s)" placeholder="Wind speed (m/s)" required="required" />
+            <input type="text" name="Visibility (10m)" placeholder="Visibility (10m)" required="required" />
+            <input type="text" name="Solar Radiation (MJ/m2)" placeholder="Solar Radiation (MJ/m2)" required="required" />
+            <input type="text" name="Rainfall(mm)" placeholder="Rainfall(mm)" required="required" />
+            <input type="text" name="Snowfall (cm)" placeholder="Snowfall (cm)" required="required" />
+            <input type="text" name="weekday" placeholder="weekday" required="required" />
+            <input type="text" name="Seasons" placeholder="Seasons" required="required" />
+            <input type="text" name="Holiday" placeholder="Holiday" required="required" />
+            <input type="text" name="Functioning Day" placeholder="Functioning Day" required="required" />
+    
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    
+       <br>
+       <br>
+       The prediction is {{results}}
+    
+     </div>
+    
+    
+</body>
+</html>
