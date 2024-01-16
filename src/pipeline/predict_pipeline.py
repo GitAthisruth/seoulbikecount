@@ -13,10 +13,10 @@ class PredictPipeline:
             preprocessor_path="artifacts\\preprocessor.pkl"
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
-            print("preprocessor",preprocessor)
+            # print("preprocessor",preprocessor)
             data_scaled=preprocessor.transform(features)
             preds=model.predict(data_scaled)
-            print("preds",data_scaled)
+            # print("preds",data_scaled)
             return preds
         except Exception as e:
             raise CustomException(e,sys)
@@ -68,8 +68,8 @@ class CustomData:
             'Holiday':[self.Holiday],
             'Functioning Day':[self.Functioning_Day]
             }
-            print(custom_data_input_dict)
-            print(pd.DataFrame(custom_data_input_dict))
+            # print(custom_data_input_dict)
+            # print(pd.DataFrame(custom_data_input_dict))
             return pd.DataFrame(custom_data_input_dict)
         except Exception as e:
             raise CustomException(e,sys)
