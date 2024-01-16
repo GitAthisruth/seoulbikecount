@@ -23,12 +23,38 @@
             <input type="text" name="Solar Radiation (MJ/m2)" placeholder="Solar Radiation (MJ/m2)" required="required" />
             <input type="text" name="Rainfall(mm)" placeholder="Rainfall(mm)" required="required" />
             <input type="text" name="Snowfall (cm)" placeholder="Snowfall (cm)" required="required" />
-            <input type="text" name="weekday" placeholder="weekday" required="required" />
-            <input type="text" name="Seasons" placeholder="Seasons" required="required" />
-            <input type="text" name="Holiday" placeholder="Holiday" required="required" />
-            <input type="text" name="Functioning Day" placeholder="Functioning Day" required="required" />
-    
-            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            <br>
+            <label class="form-label">Weekday</label>
+            <select name="weekday" required="required">
+            <option value="0">Monday</option>
+            <option value="1">Tuesday</option>
+            <option value="2">Wednesday</option>
+            <option value="3">Thursday</option>
+            <option value="4">Friday</option>
+            <option value="5">Saturday</option>
+            <option value="6">Sunday</option>
+            </select>
+            <label class="form-label">Seasons</label>
+            <select name="Seasons" required="required">
+            <option value="Winter">Winter</option>
+            <option value="Summer">Summer</option>
+            <option value="Autumn">Autumn</option>
+            <option value="Spring">Spring</option>
+            </select>
+            <label class="form-label">Holiday or Not</label>
+            <select name="Holiday" required="required">
+            <option value="No Holiday">No Holiday</option>
+            <option value="Holiday">Holiday</option>
+            </select>
+            <label class="form-label">Functioning Day or Not</label>
+            <select name="Functioning Day" required="required">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            </select>
+            <br>
+            <div>
+            </div>
+            <h1><button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></h1>
         </form>
     
        <br>
