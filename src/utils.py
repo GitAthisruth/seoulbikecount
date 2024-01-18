@@ -59,8 +59,14 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param):
 
 def load_object(file_path):
     try:
-        with open(file_path, "rb") as file_obj:
+        absolute_path = os.path.join(os.getcwd(), file_path).replace("\\","/")
+        with open(absolute_path, "rb") as file_obj:
+            print(absolute_path)
             return dill.load(file_obj)#dill used to load pickle file 
 
     except Exception as e:
         raise CustomException(e, sys)
+
+# model_path = "artifacts/model.pkl"
+# absolute_path = os.path.join(os.getcwd(), model_path).replace("\\","/")
+# print(absolute_path)
