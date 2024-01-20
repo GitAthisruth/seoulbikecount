@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 
 
+
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 
@@ -46,5 +47,5 @@ def predict_datapoint():
         return render_template('home.html',results=abs(int(results[0])))
     
 if __name__=="__main__":
-    app.run(debug=True,host="0.0.0.0",port=5000)#remove debug=True during deployment
+    app.run(host="0.0.0.0",port=5000)#remove debug=True during deployment
 
